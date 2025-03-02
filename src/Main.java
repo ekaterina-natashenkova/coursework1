@@ -224,14 +224,5 @@ public class Main {
     public static void printSeparator() {
         System.out.println("\n========================================================================================");
     }
-//public static Employee getEmployeeMaxSalaryDepartment(int department) {
-//        Employee employeeMaxSalaryDepartment = null;
-//        for (int i = 0; i < employees.length; i++) {
-//            if (employees[i].getDepartment() == department && (employeeMaxSalaryDepartment == null || employees[i].getSalary() > employeeMaxSalaryDepartment.getSalary())) {
-//                employeeMaxSalaryDepartment = employees[i];
-//            }
-//        }
-//        return employeeMaxSalaryDepartment;
-//    }
 
 }
