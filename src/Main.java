@@ -35,29 +35,33 @@ public class Main {
         indexingSelary(10);
         printEmployees();
 
-        System.out.println("\nСотрудник с минимальной ЗП - " + getEmployeeMinSalaryDepartment(1));
-        System.out.println("\nСотрудник с минимальной ЗП - " + getEmployeeMinSalaryDepartment(2));
-        System.out.println("\nСотрудник с минимальной ЗП - " + getEmployeeMinSalaryDepartment(3));
-        System.out.println("\nСотрудник с минимальной ЗП - " + getEmployeeMinSalaryDepartment(4));
-        System.out.println("\nСотрудник с минимальной ЗП - " + getEmployeeMinSalaryDepartment(5));
+        System.out.println();
+        System.out.println("Сотрудник с минимальной ЗП - " + getEmployeeMinSalaryDepartment(1));
+        System.out.println("Сотрудник с минимальной ЗП - " + getEmployeeMinSalaryDepartment(2));
+        System.out.println("Сотрудник с минимальной ЗП - " + getEmployeeMinSalaryDepartment(3));
+        System.out.println("Сотрудник с минимальной ЗП - " + getEmployeeMinSalaryDepartment(4));
+        System.out.println("Сотрудник с минимальной ЗП - " + getEmployeeMinSalaryDepartment(5));
 
-        System.out.println("\nСотрудник с максимальной ЗП - " + getEmployeeMaxSalaryDepartment(1));
-        System.out.println("\nСотрудник с максимальной ЗП - " + getEmployeeMaxSalaryDepartment(2));
-        System.out.println("\nСотрудник с максимальной ЗП - " + getEmployeeMaxSalaryDepartment(3));
-        System.out.println("\nСотрудник с максимальной ЗП - " + getEmployeeMaxSalaryDepartment(4));
-        System.out.println("\nСотрудник с максимальной ЗП - " + getEmployeeMaxSalaryDepartment(5));
+        System.out.println();
+        System.out.println("Сотрудник с максимальной ЗП - " + getEmployeeMaxSalaryDepartment(1));
+        System.out.println("Сотрудник с максимальной ЗП - " + getEmployeeMaxSalaryDepartment(2));
+        System.out.println("Сотрудник с максимальной ЗП - " + getEmployeeMaxSalaryDepartment(3));
+        System.out.println("Сотрудник с максимальной ЗП - " + getEmployeeMaxSalaryDepartment(4));
+        System.out.println("Сотрудник с максимальной ЗП - " + getEmployeeMaxSalaryDepartment(5));
 
-        System.out.println("\nСумма затрат на ЗП в месяц по отделу составила " + getSumSalaryMonthDepartment(1));
-        System.out.println("\nСумма затрат на ЗП в месяц по отделу составила " + getSumSalaryMonthDepartment(2));
-        System.out.println("\nСумма затрат на ЗП в месяц по отделу составила " + getSumSalaryMonthDepartment(3));
-        System.out.println("\nСумма затрат на ЗП в месяц по отделу составила " + getSumSalaryMonthDepartment(4));
-        System.out.println("\nСумма затрат на ЗП в месяц по отделу составила " + getSumSalaryMonthDepartment(5));
+        System.out.println();
+        System.out.println("Сумма затрат на ЗП в месяц по 1 отделу составила " + getSumSalaryMonthDepartment(1));
+        System.out.println("Сумма затрат на ЗП в месяц по 2 отделу составила " + getSumSalaryMonthDepartment(2));
+        System.out.println("Сумма затрат на ЗП в месяц по 3 отделу составила " + getSumSalaryMonthDepartment(3));
+        System.out.println("Сумма затрат на ЗП в месяц по 4 отделу составила " + getSumSalaryMonthDepartment(4));
+        System.out.println("Сумма затрат на ЗП в месяц по 5 отделу составила " + getSumSalaryMonthDepartment(5));
 
-        System.out.println("\nСреднее значение зарплаты по отделу в месяц составляет " + getPerMediumSalaryDepartment(1));
-        System.out.println("\nСреднее значение зарплаты по отделу в месяц составляет " + getPerMediumSalaryDepartment(2));
-        System.out.println("\nСреднее значение зарплаты по отделу в месяц составляет " + getPerMediumSalaryDepartment(3));
-        System.out.println("\nСреднее значение зарплаты по отделу в месяц составляет " + getPerMediumSalaryDepartment(4));
-        System.out.println("\nСреднее значение зарплаты по отделу в месяц составляет " + getPerMediumSalaryDepartment(5));
+        System.out.println();
+        System.out.println("Среднее значение зарплаты по 1 отделу в месяц составляет " + getPerMediumSalaryDepartment(1));
+        System.out.println("Среднее значение зарплаты по 2 отделу в месяц составляет " + getPerMediumSalaryDepartment(2));
+        System.out.println("Среднее значение зарплаты по 3 отделу в месяц составляет " + getPerMediumSalaryDepartment(3));
+        System.out.println("Среднее значение зарплаты по 4 отделу в месяц составляет " + getPerMediumSalaryDepartment(4));
+        System.out.println("Среднее значение зарплаты по 5 отделу в месяц составляет " + getPerMediumSalaryDepartment(5));
 
         indexingSelaryDepartment(5, 1);
         indexingSelaryDepartment(10, 2);
@@ -139,31 +143,31 @@ public class Main {
     public static Employee getEmployeeMinSalaryDepartment(int department) {
         Employee employeeMinSalaryDepartment = null;
         for (int i = 0; i < employees.length; i++) {
-            department = employees[i].getDepartment();
-            if (employeeMinSalaryDepartment == null || employees[i].getSalary() < employeeMinSalaryDepartment.getSalary()) {
+            if (employees[i].getDepartment() == department && (employeeMinSalaryDepartment == null || employees[i].getSalary() < employeeMinSalaryDepartment.getSalary())) {
                 employeeMinSalaryDepartment = employees[i];
-            }
+                }
         }
         return employeeMinSalaryDepartment;
     }
 
     //максимум в отделе
     public static Employee getEmployeeMaxSalaryDepartment(int department) {
-        Employee getEmployeeMaxSalaryDepartment = null;
-        for (Employee employee : employees) {
-            if (getEmployeeMaxSalaryDepartment == null || employee.getSalary() > getEmployeeMaxSalaryDepartment.getSalary() && department >= 1 || department <= 5) {
-                getEmployeeMaxSalaryDepartment = employee;
+        Employee employeeMaxSalaryDepartment = null;
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i].getDepartment() == department && (employeeMaxSalaryDepartment == null || employees[i].getSalary() > employeeMaxSalaryDepartment.getSalary())) {
+                employeeMaxSalaryDepartment = employees[i];
             }
         }
-        return getEmployeeMaxSalaryDepartment;
+        return employeeMaxSalaryDepartment;
     }
 
     //сумма по отделу
     public static double getSumSalaryMonthDepartment(int department) {
         double sumSalaryMonthDepartment = 0;
-        for (Employee employee : employees) {
-            department = employee.getDepartment();
-            sumSalaryMonthDepartment += employee.getSalary();
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i].getDepartment() == department) {
+                sumSalaryMonthDepartment += employees[i].getSalary();
+            }
         }
         return sumSalaryMonthDepartment;
     }
@@ -172,7 +176,7 @@ public class Main {
     public static double getPerMediumSalaryDepartment(int department) {
         int d = 0;
         for (int i = 0; i < employees.length; i++) {
-            if (department == employees[i].getDepartment()) {
+            if (employees[i].getDepartment() == department) {
                 d++;
             }
         }
@@ -194,33 +198,40 @@ public class Main {
     //Напечатать всех сотрудников отдела (все данные, кроме отдела)
     public static void printFullNameSalaryEmployees() {
         for (Employee employee : employees) {
-            System.out.println("ФИО - " + employee.getFullName() + " , ЗП - " + employee.getSalary());
+            System.out.println(employee.getId() + ", ФИО - " + employee.getFullName() + ", ЗП - " + employee.getSalary());
         }
     }
 
     //Получить в качестве параметра число и вывести - Всех сотрудников с зп меньше числа (распечатать id, фио и зп в консоль)
-    public static Employee printEmployeeSalaryLessBase(int base) {
-        Employee employeeSalaryLessBase = null;
+    public static void printEmployeeSalaryLessBase(int base) {
         for (Employee employee : employees) {
-            if (employeeSalaryLessBase == null || employee.getSalary() < base) {
-                employeeSalaryLessBase = employee;
+            if (employee.getSalary() < base) {
+                Employee employeeSalaryLessBase = employee;
+                System.out.println(employeeSalaryLessBase);
             }
         }
-        return employeeSalaryLessBase;
     }
 
     //Получить в качестве параметра число и вывести - Всех сотрудников с зп больше (или равно) числа (распечатать id, фио и зп в консоль)
-    public static Employee printEmployeeSalaryMoreBase(int base) {
-        Employee employeeSalaryMoreBase = null;
-        for (Employee employee : employees) {
-            if (employeeSalaryMoreBase == null || employee.getSalary() > base) {
-                employeeSalaryMoreBase = employee;
+    public static void printEmployeeSalaryMoreBase(int base) {
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i].getSalary() >= base) {
+                Employee employeeSalaryMoreBase = employees[i];
+                System.out.println(employeeSalaryMoreBase);
             }
         }
-        return employeeSalaryMoreBase;
     }
     public static void printSeparator() {
         System.out.println("\n========================================================================================");
     }
+//public static Employee getEmployeeMaxSalaryDepartment(int department) {
+//        Employee employeeMaxSalaryDepartment = null;
+//        for (int i = 0; i < employees.length; i++) {
+//            if (employees[i].getDepartment() == department && (employeeMaxSalaryDepartment == null || employees[i].getSalary() > employeeMaxSalaryDepartment.getSalary())) {
+//                employeeMaxSalaryDepartment = employees[i];
+//            }
+//        }
+//        return employeeMaxSalaryDepartment;
+//    }
 
 }
