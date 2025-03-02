@@ -15,8 +15,8 @@ public class Employee {
         this.fullName = fullName;
         this.department = department;
         this.salary = salary;
-
     }
+
     public int getId() {
         return id;
     }
